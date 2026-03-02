@@ -23,6 +23,7 @@ function Hero() {
 
 
     const sendMessage = async () => {
+        setThinking(true);
         const response = await fetch("http://127.0.0.1:5000/chat",
             {
                 method: "POST",
@@ -34,6 +35,7 @@ function Hero() {
         );
 
         const data = await response.json();
+        setThinking(false);
 
 
         // let ChatUserArr = chatHistoryUserArray;
@@ -73,11 +75,18 @@ function Hero() {
     let [chatHistoryArray, setChatHistoryArray] = useState([]);
     let [turn, setTurn] = useState(true);
 
+    let [thinking, setThinking] = useState(false);
+
 
 
     return (
         <>
-            <div id="container" className=' h-[85vh] bg-[#1E1E1E] flex flex-col w-full justify-center items-center gap-5' >
+        {
+            thinking ?
+
+            <p className='animate-bounce text-center h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display] '>Thinking...</p> : <p className='text-center h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display]'></p>
+        }
+            <div id="container" className=' h-[80vh] bg-[#1E1E1E] flex flex-col w-full justify-center items-center gap-5' >
                 <div id="dialogueBox" className='h-[50vh] w-[80vw] bg-[#2e2e2e] rounded-2xl overflow-y-scroll snap-end'>
                     <div className="text-xl text-white rounded-xl flex flex-col justify-center">
                         {chat ? 

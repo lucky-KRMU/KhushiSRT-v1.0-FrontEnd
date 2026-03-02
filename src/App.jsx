@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Hero />
+      <div className='bg-[#1e1e1e]'>
+        <Header />
+        <Hero />
+      </div>
     </>
   )
 }
