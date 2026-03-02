@@ -84,7 +84,7 @@ function Hero() {
         {
             thinking ?
 
-            <p className='animate-bounce text-center h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display] '>Thinking...</p> : <p className='text-center h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display]'></p>
+            <p className='animate-bounce z-0 text-center h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display] '>Thinking...</p> : <p className='text-center z-0 h-[5vh] bg-[#1e1e1e] text-white text-2xl p-4 font-[playfair_display]'></p>
         }
             <div id="container" className=' h-[80vh] bg-[#1E1E1E] flex flex-col w-full justify-center items-center gap-5' >
                 <div id="dialogueBox" className='h-[50vh] w-[80vw] bg-[#2e2e2e] rounded-2xl overflow-y-scroll snap-end'>
