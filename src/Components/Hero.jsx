@@ -78,14 +78,14 @@ function Hero() {
     return (
         <>
             <div id="container" className=' h-[85vh] bg-[#1E1E1E] flex flex-col w-full justify-center items-center gap-5' >
-                <div id="dialogueBox" className='h-[50vh] w-[80vw] bg-[#2e2e2e] rounded-2xl overflow-y-scroll'>
+                <div id="dialogueBox" className='h-[50vh] w-[80vw] bg-[#2e2e2e] rounded-2xl overflow-y-scroll snap-end'>
                     <div className="text-xl text-white rounded-xl flex flex-col justify-center">
                         {chat ? 
                             chatHistoryArray.map((element)=>{
                                 if(element[0]==="user"){
-                                    return(<p className='ml-auto mr-3'>{element[1]}</p>);
+                                    return(<p className='ml-auto mr-3 mt-2 bg-[#0f0f0f] p-3 rounded-2xl'>{element[1]}</p>);
                                 } else {
-                                   return(<p className='m-3'><b>🌷KhushiSRT: </b>{element[1]}</p>)
+                                   return(<p className='m-4'><b className='bg-purple-700 rounded-2xl p-1'>🌷KhushiSRT: </b>{element[1]}</p>)
                                 }
                             })
                             : <p className='m-auto mt-[20vh] text-3xl font-[play]'>How can I help You today?...😄</p>}
