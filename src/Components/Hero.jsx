@@ -2,19 +2,26 @@ import {React, useState} from 'react'
 
 
 
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submited");
+}
 
 
 
 function QueryForm () {
     return (
         <>
-        <form className='w-[80vw] h-[10vh] bg-[#2e2e2e] rounded-2xl flex flex-row justify-center items-center gap-5'>
+        <form  onSubmit={handleSubmit}  className='w-[80vw] h-[10vh] bg-[#2e2e2e] rounded-2xl flex flex-row justify-center items-center gap-5'>
             <input type="text" name="query" id="query" className="w-[70vw] font-[play]  text-3xl text-white bg-transparent focus:outline-0" placeholder='Shall we start talking ... ? 😁'/>
-            <input type="submit" value="&uarr;" className='bg-[#3e3e3e] text-white h-10 w-10 text-2xl rounded-4xl cursor-pointer' />
-
+            <input type="submit" value="&uarr;" className='bg-[#3e3e3e] text-white h-10 w-10 text-2xl rounded-4xl cursor-pointer'/>
         </form>
         </>
     );
+}
+
+async function demoChatFunc () {
+    
 }
 
 function Hero() {
